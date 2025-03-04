@@ -40,12 +40,38 @@ html::before {
     var(--color-brown-100),
     var(--color-brown-900)
   );
+  z-index: -2;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
 body {
   display: flex;
+  z-index: 2;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+#title-and-icons-wrapper {
+  display: flex;
+  gap: 16px;
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  user-select: none;
+}
+.fa-mug-hot {
+  color: var(--color-brown-100);
+
+  &:nth-child(3) {
+    transform: rotate(180deg) scaleY(-1);
+  }
 }
