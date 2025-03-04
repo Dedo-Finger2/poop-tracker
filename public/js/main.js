@@ -40,8 +40,14 @@ function updateDatabase(database) {
   localStorage.setItem("database", JSON.stringify(database));
 }
 
+function setTodayPoopCount() {
+  const database = getDatabase();
+  TodayPoopCount.textContent = database.todayPoopCount;
+}
+
 function main() {
   createLocalstorageDatabase();
+  setTodayPoopCount();
   PoopButton.addEventListener("click", registerNewPoop);
 }
 
