@@ -111,3 +111,20 @@ body {
 #description {
   color: var(--color-text-secondary);
 }
+
+#user-streak-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  background: rgb(from var(--color-brown-100) r g b / 30%);
+  backdrop-filter: blur(50px);
+  padding: 32px;
+  min-width: 400px;
+  border-radius: 36px;
+
+  & h3#current-streak-number {
+    font-size: 32px;
+    font-weight: var(--heading-font-weight);
+  }
+}
