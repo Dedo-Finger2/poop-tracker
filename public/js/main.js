@@ -28,7 +28,7 @@ function registerNewPoop() {
   const newValue = todayPoopNumber + 1;
   database.history = {
     ...database.history,
-    dateTime: new Date(),
+    dateTime: new Date().toLocaleString(),
     poopCount: newValue,
   };
   TodayPoopCount.textContent = newValue;
