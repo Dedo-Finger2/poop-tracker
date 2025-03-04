@@ -3,8 +3,8 @@
 @import "variables.css";
 
 :root {
-  --body-font-size: 16px;
-  --heading-font-size: 64px;
+  --body-font-size: 2vw;
+  --heading-font-size: 8vw;
   --body-font-weight: 500;
   --heading-font-weight: 600;
 
