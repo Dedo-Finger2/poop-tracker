@@ -84,7 +84,11 @@ body {
   align-items: center;
   gap: 28px;
 
-  & button#poop-button {
+  & #poop-button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
     outline: none;
@@ -95,6 +99,24 @@ body {
 
     &:hover {
       cursor: pointer;
+    }
+
+    & div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgb(from var(--color-brown-100) r g b / 20%);
+      backdrop-filter: blur(8px);
+      padding: 6px;
+      border-radius: 8px;
+      width: 100%;
+      color: var(--color-text-primary);
+      font-weight: var(--heading-font-weight);
+      font-size: 24px;
+      animation-name: show-from-bottom-up-opacity;
+      animation-duration: 1s;
+      animation-fill-mode: backwards;
+      animation-delay: 2s;
     }
   }
 
