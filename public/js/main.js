@@ -1,3 +1,5 @@
+const CurrentStreakText = document.querySelector("#current-streak-number");
+
 function createLocalstorageDatabase() {
   const storagedData = localStorage.getItem("database");
   if (storagedData) return;
@@ -8,6 +10,14 @@ function createLocalstorageDatabase() {
     history: [],
   };
   localStorage.setItem("database", JSON.stringify(data));
+}
+
+/**
+ * @returns {{ todayPoopCount: number, streak: number, lastTimePooped: string, history: Array<{ dateTime: string, poopCount: number }> }}
+ */
+function getDatabase() {
+  const storagedData = localStorage.getItem("database");
+  return JSON.parse(storagedData);
 }
 
 function main() {
