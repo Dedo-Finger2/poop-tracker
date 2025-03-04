@@ -68,7 +68,10 @@ body {
   font-size: var(--heading-font-size);
   font-weight: var(--heading-font-weight);
   user-select: none;
+  animation-name: show-from-bottom-up-opacity;
+  animation-duration: 1s;
 }
+
 .fa-mug-hot {
   color: var(--color-brown-100);
 
@@ -87,6 +90,10 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
+    animation-name: show-from-bottom-up-opacity;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s;
 
     &:hover {
       cursor: pointer;
@@ -111,6 +118,10 @@ body {
 
 #description {
   color: var(--color-text-secondary);
+  animation-name: show-from-bottom-up-opacity;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.8s;
 }
 
 #user-streak-wrapper {
@@ -123,6 +134,10 @@ body {
   padding: 32px;
   min-width: 400px;
   border-radius: 36px;
+  animation-name: show-from-bottom-up-opacity;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.8s;
 
   & h3#current-streak-number {
     font-size: 32px;
@@ -138,6 +153,10 @@ body {
   padding: 12px;
   width: fit-content;
   border-radius: 100%;
+  animation-name: show-from-bottom-up-opacity;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 1.2s;
 }
 
 #user-history-wrapper {
@@ -197,5 +216,16 @@ body {
 
   #user-history-wrapper {
     min-width: 100%;
+  }
+}
+
+@keyframes show-from-bottom-up-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
