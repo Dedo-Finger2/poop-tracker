@@ -206,10 +206,20 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 1024px) {
+  #title-and-logo-wrapper h1 {
+    font-size: 6vw;
+  }
+}
+
 @media (max-width: 500px) {
   #user-streak-wrapper {
     min-width: 260px;
     padding: 24px;
+  }
+
+  #title-and-logo-wrapper h1 {
+    font-size: 12vw;
   }
 
   #user-history-wrapper {
