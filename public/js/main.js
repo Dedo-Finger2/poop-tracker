@@ -33,7 +33,11 @@ function registerNewPoop() {
   };
   TodayPoopCount.textContent = newValue;
   database.todayPoopCount = newValue;
-  console.log(database);
+  updateDatabase(database);
+}
+
+function updateDatabase(database) {
+  localStorage.setItem("database", JSON.stringify(database));
 }
 
 function main() {
