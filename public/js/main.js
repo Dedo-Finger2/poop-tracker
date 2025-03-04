@@ -1,4 +1,5 @@
-const CurrentStreakText = document.querySelector("#current-streak-number");
+const PoopButton = document.querySelector("#poop-button");
+const TodayPoopCount = document.querySelector("#today-poop-count");
 
 function createLocalstorageDatabase() {
   const storagedData = localStorage.getItem("database");
@@ -20,8 +21,24 @@ function getDatabase() {
   return JSON.parse(storagedData);
 }
 
+function registerNewPoop() {
+  const database = getDatabase();
+  database.lastTimePooped = new Date().toLocaleString();
+  const todayPoopNumber = Number(TodayPoopCount.textContent);
+  const newValue = todayPoopNumber + 1;
+  database.history = {
+    ...database.history,
+    dateTime: new Date(),
+    poopCount: newValue,
+  };
+  TodayPoopCount.textContent = newValue;
+  database.todayPoopCount = newValue;
+  console.log(database);
+}
+
 function main() {
   createLocalstorageDatabase();
+  PoopButton.addEventListener("click", registerNewPoop);
 }
 
 main();
