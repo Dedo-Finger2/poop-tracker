@@ -100,8 +100,13 @@ body {
     &:hover {
       cursor: pointer;
     }
+    &:hover svg {
+      scale: 110%;
+      transition: all ease-in-out 0.2s;
+      z-index: -1;
+    }
 
-    & div {
+    & #today-poop-count-and-icon-wrapper {
       position: absolute;
       top: 0;
       left: 0;
