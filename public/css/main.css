@@ -4,7 +4,7 @@
 
 :root {
   --body-font-size: 2vw;
-  --heading-font-size: 8vw;
+  --heading-font-size: 4vw;
   --body-font-weight: 500;
   --heading-font-weight: 600;
 
@@ -62,21 +62,19 @@ body {
   overflow: hidden;
 }
 
-#title-and-icons-wrapper {
+#title-and-logo-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
   font-size: var(--heading-font-size);
   font-weight: var(--heading-font-weight);
   user-select: none;
   animation-name: show-from-bottom-up-opacity;
   animation-duration: 1s;
-}
 
-.fa-mug-hot {
-  color: var(--color-brown-100);
-
-  &:nth-child(3) {
-    transform: rotate(180deg) scaleY(-1);
+  & img {
+    width: 70px;
   }
 }
 
