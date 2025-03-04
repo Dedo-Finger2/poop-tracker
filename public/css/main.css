@@ -188,3 +188,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 500px) {
+  #user-streak-wrapper {
+    min-width: 260px;
+    padding: 24px;
+  }
+
+  #user-history-wrapper {
+    min-width: 100%;
+  }
+}
