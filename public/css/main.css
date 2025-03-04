@@ -75,3 +75,39 @@ body {
     transform: rotate(180deg) scaleY(-1);
   }
 }
+
+#poop-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  & button#poop-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & #ic-poop {
+    fill: linear;
+  }
+}
+
+#Combined-Shape {
+  fill: url(#poop-svg-gradient);
+}
+
+.svg-gradient-top-color {
+  stop-color: var(--color-brown-100);
+}
+.svg-gradient-bottom-color {
+  stop-color: var(--color-brown-500);
+}
+
+#description {
+  color: var(--color-text-secondary);
+}
